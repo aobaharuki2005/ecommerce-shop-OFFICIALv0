@@ -26,10 +26,10 @@ updates:
         update-types:
           - "major"
       
-      root-security: # Nhóm riêng cho security updates
-        applies-to: security-updates
-        patterns:
-          - "*"
+      # root-security: # Nhóm riêng cho security updates
+      #   applies-to: security-updates
+      #   patterns:
+      #     - "*"
     
     # Tùy chỉnh commit message
     commit-message:
@@ -70,10 +70,10 @@ updates:
         update-types:
           - "major"
       
-      server-security: # Nhóm riêng cho security updates
-        applies-to: security-updates
-        patterns:
-          - "*"
+      # server-security: # Nhóm riêng cho security updates
+      #   applies-to: security-updates
+      #   patterns:
+      #     - "*"
     
     commit-message:
       prefix: "server"
