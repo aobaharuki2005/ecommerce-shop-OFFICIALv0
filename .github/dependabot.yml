@@ -17,13 +17,16 @@ updates:
     groups:
       minor-and-patch-updates: # Nhóm 1: Chỉ các bản cập nhật Minor và Patch
         applies-to: version-updates
+        patterns:
+          - "*"
         update-types:
           - "minor"
           - "patch"
-        patterns:
-          - "*"
+        
       major-updates: # Nhóm 2: Chỉ các bản cập nhật Major
         applies-to: version-updates
+        patterns:
+          - "*"
         update-types:
           - "major"
     # Gán nhãn rõ ràng cho ecosystem
@@ -47,13 +50,16 @@ updates:
     groups:
       minor-and-patch-updates: # Nhóm 1: Chỉ các bản cập nhật Minor và Patch
         applies-to: version-updates
+        patterns:
+          - "*"
         update-types:
           - "minor"
           - "patch"
-        patterns:
-          - "*"
+        
       major-updates: # Nhóm 2: Chỉ các bản cập nhật Major
         applies-to: version-updates
+        patterns:
+          - "*"
         update-types:
           - "major"
     # Gán nhãn rõ ràng cho ecosystem
