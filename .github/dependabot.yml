@@ -1,0 +1,60 @@
+
+version: 2
+updates:
+  # Cấu hình cho NPM (root folder)
+  - package-ecosystem: "npm" # Dự án NodeJS/NextJS
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+    # Giới hạn số PR được mở lên là 10
+    open-pull-requests-limit: 20
+    # Gom nhóm các bản cập nhật thường và bảo mật:
+    groups:
+      vulnerabilities: # Tên nhóm (tự đặt)
+        applies-to: version-updates
+        patterns:
+          - "*"
+    # Gán nhãn rõ ràng cho ecosystem
+    labels:
+      - "npm-dependencies"
+      - "root-side"
+
+  # Cấu hình cho NPM (server folder)
+  - package-ecosystem: "npm" # Dự án NodeJS/NextJS
+    directory: "/server"
+    schedule:
+      interval: "daily"
+
+    # Giới hạn số PR được mở lên là 10
+    open-pull-requests-limit: 20
+    # Gom nhóm các bản cập nhật thường và bảo mật:
+    groups:
+      vulnerabilities: # Tên nhóm (tự đặt)
+        applies-to: version-updates
+        patterns:
+          - "*"
+    # Gán nhãn rõ ràng cho ecosystem
+    labels:
+      - "npm-dependencies"
+      - "server-side"
+
+  # Cấu hình cho Bun (root folder)
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+    # Giới hạn số PR được mở lên là 10
+    open-pull-requests-limit: 20
+    # Gom nhóm các bản cập nhật thường và bảo mật:
+    groups:
+      vulnerabilities: # Tên nhóm (tự đặt)
+        applies-to: version-updates
+        patterns:
+          - "*"
+    # Gán nhãn rõ ràng cho ecosystem
+    labels:
+      - "bun-dependencies"
+      - "root-side"
+    
