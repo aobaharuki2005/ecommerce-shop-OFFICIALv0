@@ -7,18 +7,30 @@ updates:
     schedule:
       interval: "daily"
 
-    # Giới hạn số PR được mở lên là 10
+    # Cho phép tất cả loại phụ thuộc
+    allow:
+      - dependency-type: "all"
+
+    # Giới hạn số PR được mở lên là 20
     open-pull-requests-limit: 20
     # Gom nhóm các bản cập nhật thường và bảo mật:
     groups:
-      vulnerabilities: # Tên nhóm (tự đặt)
+      minor-and-patch-updates: # Nhóm 1: Chỉ các bản cập nhật Minor và Patch
         applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
         patterns:
           - "*"
+      major-updates: # Nhóm 2: Chỉ các bản cập nhật Major
+        applies-to: version-updates
+        update-types:
+          - "major"
     # Gán nhãn rõ ràng cho ecosystem
     labels:
-      - "npm-dependencies"
       - "root-side"
+      - "dependencies"
+      - "automated-pr"
 
   # Cấu hình cho NPM (server folder)
   - package-ecosystem: "npm" # Dự án NodeJS/NextJS
@@ -26,35 +38,27 @@ updates:
     schedule:
       interval: "daily"
 
-    # Giới hạn số PR được mở lên là 10
+    # Cho phép tất cả loại phụ thuộc
+    allow:
+      - dependency-type: "all"
+
+    # Giới hạn số PR được mở lên là 20
     open-pull-requests-limit: 20
-    # Gom nhóm các bản cập nhật thường và bảo mật:
     groups:
-      vulnerabilities: # Tên nhóm (tự đặt)
+      minor-and-patch-updates: # Nhóm 1: Chỉ các bản cập nhật Minor và Patch
         applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
         patterns:
           - "*"
+      major-updates: # Nhóm 2: Chỉ các bản cập nhật Major
+        applies-to: version-updates
+        update-types:
+          - "major"
     # Gán nhãn rõ ràng cho ecosystem
     labels:
-      - "npm-dependencies"
       - "server-side"
-
-  # # Cấu hình cho Bun (root folder)
-  # - package-ecosystem: "bun"
-  #   directory: "/"
-  #   schedule:
-  #     interval: "daily"
-
-  #   # Giới hạn số PR được mở lên là 10
-  #   open-pull-requests-limit: 20
-  #   # Gom nhóm các bản cập nhật thường và bảo mật:
-  #   groups:
-  #     vulnerabilities: # Tên nhóm (tự đặt)
-  #       applies-to: version-updates
-  #       patterns:
-  #         - "*"
-  #   # Gán nhãn rõ ràng cho ecosystem
-  #   labels:
-  #     - "bun-dependencies"
-  #     - "root-side"
+      - "dependencies"
+      - "automated-pr"
     
