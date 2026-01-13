@@ -21,8 +21,8 @@ updates:
       
       root-major: # Tên nhóm unique cho root
         applies-to: version-updates
-        patterns:
-          - "*"
+        # patterns:
+        #   - "*"
         update-types:
           - "major"
       
@@ -65,8 +65,8 @@ updates:
       
       server-major: # Tên nhóm unique cho server
         applies-to: version-updates
-        patterns:
-          - "*"
+        # patterns:
+        #   - "*"
         update-types:
           - "major"
       
