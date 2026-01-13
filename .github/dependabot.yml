@@ -39,22 +39,22 @@ updates:
       - "npm-dependencies"
       - "server-side"
 
-  # Cấu hình cho Bun (root folder)
-  - package-ecosystem: "bun"
-    directory: "/"
-    schedule:
-      interval: "daily"
+  # # Cấu hình cho Bun (root folder)
+  # - package-ecosystem: "bun"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "daily"
 
-    # Giới hạn số PR được mở lên là 10
-    open-pull-requests-limit: 20
-    # Gom nhóm các bản cập nhật thường và bảo mật:
-    groups:
-      vulnerabilities: # Tên nhóm (tự đặt)
-        applies-to: version-updates
-        patterns:
-          - "*"
-    # Gán nhãn rõ ràng cho ecosystem
-    labels:
-      - "bun-dependencies"
-      - "root-side"
+  #   # Giới hạn số PR được mở lên là 10
+  #   open-pull-requests-limit: 20
+  #   # Gom nhóm các bản cập nhật thường và bảo mật:
+  #   groups:
+  #     vulnerabilities: # Tên nhóm (tự đặt)
+  #       applies-to: version-updates
+  #       patterns:
+  #         - "*"
+  #   # Gán nhãn rõ ràng cho ecosystem
+  #   labels:
+  #     - "bun-dependencies"
+  #     - "root-side"
     
